@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import './assets/css/style.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NewEmployeeForm from "./components/form"
 import {Container} from "reactstrap"

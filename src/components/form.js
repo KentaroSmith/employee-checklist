@@ -123,6 +123,34 @@ const NewEmployeeForm =() =>{
                     <Input id="accountLine" type="number"></Input>
                     </Col>
                     </FormGroup>
+                    <FormGroup row check id="exempt">
+                    <Label for="exempt" sm={2} size="lg">Exempt:</Label>
+                    <Col>
+                        <Input type="radio" name="radio1" value="true" class="radio"/>{' '}
+                        Yes        
+                        <Input type="radio" name="radio1" value="false" class="radio"/>{' '}
+                        No
+                    </Col>
+                    </FormGroup>
+                    <FormGroup row check id="supervisor">
+                    <Label for="supervisor" sm={2} size="lg">Supervisor:</Label>
+                    <Col>
+                        <Input type="radio" name="radio1" value="true" class="radio"/>{' '}
+                        Yes        
+                        <Input type="radio" name="radio1" value="false" class="radio"/>{' '}
+                        No
+                    </Col>
+                    </FormGroup>
+                    <FormGroup row check id="visa">
+                    <Label for="visa" sm={2} size="lg">Visa Card:</Label>
+                    <Col>
+                        <Input type="radio" name="radio1" value="true" class="radio"/>{' '}
+                        Yes        
+                        <Input type="radio" name="radio1" value="false" class="radio"/>{' '}
+                        No
+                    </Col>
+                    </FormGroup>
+                    {/*end of form*/}
                 </Form>
             
         </Jumbotron>
