@@ -135,18 +135,18 @@ const NewEmployeeForm =() =>{
                     <FormGroup row check id="supervisor">
                     <Label for="supervisor" sm={2} size="lg">Supervisor:</Label>
                     <Col>
-                        <Input type="radio" name="radio1" value="true" class="radio"/>{' '}
+                        <Input type="radio" name="radio2" value="true" class="radio"/>{' '}
                         Yes        
-                        <Input type="radio" name="radio1" value="false" class="radio"/>{' '}
+                        <Input type="radio" name="radio2" value="false" class="radio"/>{' '}
                         No
                     </Col>
                     </FormGroup>
                     <FormGroup row check id="visa">
                     <Label for="visa" sm={2} size="lg">Visa Card:</Label>
                     <Col>
-                        <Input type="radio" name="radio1" value="true" class="radio"/>{' '}
+                        <Input type="radio" name="radio3" value="true" class="radio"/>{' '}
                         Yes        
-                        <Input type="radio" name="radio1" value="false" class="radio"/>{' '}
+                        <Input type="radio" name="radio3" value="false" class="radio"/>{' '}
                         No
                     </Col>
                     </FormGroup>
