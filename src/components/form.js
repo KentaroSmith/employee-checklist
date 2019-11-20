@@ -152,7 +152,7 @@ const NewEmployeeForm =() =>{
                     </FormGroup>
                     {/*end of form*/}
                 </Form>
-            
+            }
         </Jumbotron>
     )
 }
