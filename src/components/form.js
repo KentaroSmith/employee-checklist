@@ -11,7 +11,7 @@ import {
 const NewEmployeeForm =() =>{
     return(
         <Jumbotron>
-            <h1>Newhire checklist</h1>
+            <h1>New Hire Checklist</h1>
             
                 <h3>Employee info</h3>
                 <Form>

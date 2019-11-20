@@ -1,15 +1,15 @@
-import React from "react";
-import{Jumbotron} from "reactstrap";
-
+import React, {Component} from "react";
+import NewEmployeeForm from "../components/form"
 class Homepage extends Component{
     render(){
         return(
 
             <div id="home">
-                <Jumbotron>
+                <NewEmployeeForm>
 
-                </Jumbotron>
+                </NewEmployeeForm>
             </div>
         )
     }
 }
+export default Homepage;
