@@ -4,17 +4,20 @@ import './App.css';
 import './assets/css/style.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Homepage from "./pages/home"
-import {Container} from "reactstrap"
+import {Container,Navbar,NavItem, NavbarBrand} from "reactstrap"
 class App extends Component{
   render (){
     return(
-      <Router>
-        <Container>
-        <div>
+      <Container>
+        <Navbar color="dark" dark expand="md">
+          <NavbarBrand href="/">Home</NavbarBrand>
+        </Navbar>
+        <Router>
+          <div>
           <Route exact path ="/" component={Homepage} />
-        </div>
-        </Container>
-      </Router>
+          </div>
+        </Router>
+      </Container>
     )
   }
 }
