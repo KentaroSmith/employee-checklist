@@ -6,7 +6,7 @@ class AddEmployee extends Component {
     state = {
         name: "",
         startDate: "",
-        supervisor: "",
+        supervisorName: "",
         email: "",
         employeeID: "",
         position: "",
@@ -17,7 +17,7 @@ class AddEmployee extends Component {
         accountLine: "",
         exempt: false,
         supervisorStatus: false,
-        visa: false,
+        visaCard: false,
         cityHallParkingPass: false
     }
     submitEmployee = event => {
