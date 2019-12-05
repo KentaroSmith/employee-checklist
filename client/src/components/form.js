@@ -8,6 +8,8 @@ import {
     Col
 } from "reactstrap";
 
+
+
 const NewEmployeeForm =() =>{
     return(
         <Jumbotron>
@@ -18,7 +20,7 @@ const NewEmployeeForm =() =>{
                     <FormGroup row>
                     <Label for="name" sm={2} size="lg">Name:</Label>
                     <Col>
-                    <Input id="name" ref="name" value=""></Input>
+                    <Input id="name" value=""></Input>
                     </Col>
                     </FormGroup>
                     <FormGroup row>

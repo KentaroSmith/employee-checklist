@@ -53,11 +53,13 @@ const employeeSchema = new Schema({
     employeeID:{
         type:Number,
         required:true,
-        minlength:6
+        minlength:6,
+        unique: true
     },
     email:{
         type:String,
-        required:true
+        required:true,
+        unique:true
     },
     devices:{
         type:Array,
