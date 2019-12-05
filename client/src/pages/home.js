@@ -14,7 +14,7 @@ class Homepage extends Component {
     }
     render() {
         return (
-
+            // review how props work to make sure data is passing through correctly
             <div id="home">
                 <ViewAll >
 

@@ -21,6 +21,12 @@ class AddEmployee extends Component {
         cityHallParkingPass: false
     }
     submitEmployee = event => {
+        //Need to find out how information can be save via input forms in react
+        let name= this.refs.name
+        this.setState({
+            name: name
+
+        })
         api.addEmployee(this.state)
             .then(
                 console.log("It worked!")
