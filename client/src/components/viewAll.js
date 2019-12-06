@@ -1,11 +1,4 @@
 import React from "react";
-import {
-    CardHeader,
-    CardGroup,
-    Card,
-    CardBody,
-    Table
-} from 'reactstrap';
 
 const ViewAll = ({name,position,email,id}) => {
     return (

@@ -2,14 +2,14 @@ import React, { Component } from "react";
 import { Button } from "reactstrap";
 import NewEmployeeForm from "../components/form"
 import api from "../utils/api";
-import {
+/* import {
     Jumbotron,
     Input,
     Form,
     FormGroup,
     Label,
     Col
-} from "reactstrap";
+} from "reactstrap"; */
 class AddEmployee extends Component {
     state = {
         name: "Janice Wallace",
