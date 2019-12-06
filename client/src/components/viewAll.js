@@ -6,13 +6,14 @@ import {
     CardBody
 } from 'reactstrap';
 
-const ViewAll = (data) => {
+const ViewAll = ({name,position}) => {
     return (
         <CardGroup>
-            <CardHeader>Employee Name</CardHeader>
+<CardHeader>{name}</CardHeader>
             <Card>
+                <h2> {position} </h2>
                 <CardBody>
-                    {data.name}
+                    
                 </CardBody>
             </Card>
         </CardGroup>
