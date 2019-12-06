@@ -20,7 +20,11 @@ const NewEmployeeForm =() =>{
                     <FormGroup row>
                     <Label for="name" sm={2} size="lg">Name:</Label>
                     <Col>
-                    <Input id="name" value=""></Input>
+                    <Input id="name" value="" /* onChange={
+                        this.setState(()=>{
+                            return{name: this.value}
+                        })
+                    } */></Input>
                     </Col>
                     </FormGroup>
                     <FormGroup row>
