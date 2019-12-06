@@ -26,7 +26,7 @@ class Homepage extends Component {
             <div id="home" >
                 <Jumbotron>
                <span> <h1>Employee Info Dashboard</h1><Button onClick={this.findall}>Show all Employees</Button></span>
-               <Table>
+               <Table dark bordered striped hover size="sm">
                     <thead>
                         <tr>
                             <th>Employee id #</th>
