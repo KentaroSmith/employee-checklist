@@ -3,20 +3,21 @@ import {
     CardHeader,
     CardGroup,
     Card,
-    CardBody
+    CardBody,
+    Table
 } from 'reactstrap';
 
-const ViewAll = ({name,position}) => {
+const ViewAll = ({name,position,email,id}) => {
     return (
-        <CardGroup>
-<CardHeader>{name}</CardHeader>
-            <Card>
-                <h2> {position} </h2>
-                <CardBody>
-                    
-                </CardBody>
-            </Card>
-        </CardGroup>
+
+            <tbody>
+                <tr>
+                    <th scope="row">{id}</th>
+                    <td> {name} </td>
+                    <td> {position} </td>
+                    <td> {email} </td>
+                </tr>
+            </tbody>
 
     )
 }
