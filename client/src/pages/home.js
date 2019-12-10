@@ -6,6 +6,7 @@ import {
     Jumbotron,
     Table
 } from "reactstrap"
+import { thisExpression } from "@babel/types";
 class Homepage extends Component {
     state = {
         allEmployees:[]
@@ -25,7 +26,8 @@ class Homepage extends Component {
             // review how props work to make sure data is passing through correctly
             <div id="home" >
                 <Jumbotron>
-               <span> <h1>Employee Info Dashboard</h1><Button onClick={this.findall}>Show all Employees</Button></span>
+                    {this.findall()}
+               <span> <h1>Employee Info Dashboard</h1><Button onClick={this.findall}>Show all Employees this button is redundant, remove later</Button></span>
                <Table dark bordered striped hover size="sm">
                     <thead>
                         <tr>

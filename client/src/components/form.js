@@ -9,9 +9,27 @@ import {
 } from "reactstrap";
 
 
-
-const NewEmployeeForm =() =>{
+const NewEmployeeForm =(props) =>{
+    let employeeData = [{
+        name: "",
+        startDate: "",
+        supervisorName: "",
+        email: "",
+        employeeID: "",
+        position: "",
+        workgroup: "",
+        hiringManager: "",
+        location: "",
+        positionPosted: "",
+        accountLine: "",
+        exempt: false,
+        supervisorStatus: false,
+        visaCard: false,
+        cityHallParkingPass: false
+    }]
+   
     return(
+        
         <Jumbotron>
             <h1>New Hire Checklist</h1>
             
@@ -20,35 +38,31 @@ const NewEmployeeForm =() =>{
                     <FormGroup row>
                     <Label for="name" sm={2} size="lg">Name:</Label>
                     <Col>
-                    <Input id="name" value="" /* onChange={
-                        this.setState(()=>{
-                            return{name: this.value}
-                        })
-                    } */></Input>
+                    <Input id="name" ></Input>
                     </Col>
                     </FormGroup>
                     <FormGroup row>
                     <Label for="start" sm={2} size="lg">Start Date:</Label>
                     <Col>
-                    <Input id="start" type="date" value=""></Input>
+                    <Input id="start" type="date" ></Input>
                     </Col>
                     </FormGroup>
                     <FormGroup row>
                     <Label for="supervisor" sm={2} size="lg">Supervisor:</Label>
                     <Col>
-                    <Input id="supervisor" value=""></Input>
+                    <Input id="supervisor" ></Input>
                     </Col>
                     </FormGroup>
                     <FormGroup row>
                     <Label for="email" sm={2} size="lg">Email:</Label>
                     <Col>
-                    <Input id="email" type="email" value=""></Input>
+                    <Input id="email" type="email" ></Input>
                     </Col>
                     </FormGroup>
                     <FormGroup row>
                     <Label for="employeeID" sm={2} size="lg">Employee ID:</Label>
                     <Col>
-                    <Input id="employeeID" value=""></Input>
+                    <Input id="employeeID" ></Input>
                     </Col>
                     </FormGroup>
                 </Form>
@@ -58,13 +72,13 @@ const NewEmployeeForm =() =>{
                     <FormGroup row>
                     <Label for="position" sm={2} size="lg">Position:</Label>
                     <Col>
-                    <Input id="position" value=""></Input>
+                    <Input id="position" ></Input>
                     </Col>
                     </FormGroup>
                     <FormGroup row>
                     <Label for="workgroup" sm={2} size="lg">Workgroup:</Label>
                     <Col>
-                    <Input type="select" id="workgroup" name="select" value="">
+                    <Input type="select" id="workgroup" name="select" >
                         <option value="water">
                         Water Utilities
                         </option>
@@ -89,13 +103,13 @@ const NewEmployeeForm =() =>{
                     <FormGroup row>
                     <Label for="hiringManager" sm={2} size="lg">Hiring Manager:</Label>
                     <Col>
-                    <Input id="hiringManager" value=""></Input>
+                    <Input id="hiringManager"></Input>
                     </Col>
                     </FormGroup>
                     <FormGroup row>
                     <Label for="location" sm={2} size="lg">Location:</Label>
                     <Col>
-                    <Input id="location" type="select" value="">
+                    <Input id="location" type="select">
                     <option value="kaw">
                         Kaw Water Treatment Plant
                         </option>
@@ -120,18 +134,18 @@ const NewEmployeeForm =() =>{
                     <FormGroup row>
                     <Label for="positionPosted" sm={2} size="lg">Position Posted:</Label>
                     <Col>
-                    <Input id="positionPosted" type="date" value=""></Input>
+                    <Input id="positionPosted" type="date"></Input>
                     </Col>
                     </FormGroup>
                     <FormGroup row>
                     <Label for="accountLine" sm={2} size="lg">Account Line:</Label>
                     <Col>
-                    <Input id="accountLine" type="number" value=""></Input>
+                    <Input id="accountLine" type="number" ></Input>
                     </Col>
                     </FormGroup>
                    
                     
-                    <FormGroup row check id="exempt" value="">
+                    <FormGroup row check id="exempt" >
                     <Label for="exempt" sm={2} size="lg">Exempt:</Label>
                         
                         <Input type="radio" name="radio1" value="true" class="radio"/>{' '}Yes        
@@ -140,7 +154,7 @@ const NewEmployeeForm =() =>{
                     </FormGroup>
                     
                     
-                    <FormGroup row check id="supervisorStatus" value="">
+                    <FormGroup row check id="supervisorStatus" >
                     <Label for="supervisor" sm={2} size="lg">Supervisor:</Label>
 
                         <Input type="radio" name="radio2" value="true" class="radio"/>{' '}Yes        
@@ -148,7 +162,7 @@ const NewEmployeeForm =() =>{
     
                     </FormGroup>
                     
-                    <FormGroup row check id="visa" value="">
+                    <FormGroup row check id="visa" >
                     <Label for="visa" sm={2} size="lg">Visa Card:</Label>
 
                         <Input type="radio" name="radio3" value="true" class="radio"/>{' '}Yes 
@@ -156,7 +170,7 @@ const NewEmployeeForm =() =>{
                         
     
                     </FormGroup>
-                    <FormGroup row check id="cityHallParkingPass" value="">
+                    <FormGroup row check id="cityHallParkingPass" >
                     <Label for="cityHallParkingPass" sm={2} size="lg">City Hall Parking Pass:</Label>
 
                         <Input type="radio" name="radio3" value="true" class="radio"/>{' '}Yes 

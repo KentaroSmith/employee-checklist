@@ -11,7 +11,7 @@ import api from "../utils/api";
     Col
 } from "reactstrap"; */
 class AddEmployee extends Component {
-    state = {
+    /* state = {
         name: "Janice Wallace",
         startDate: "12/2/2019",
         supervisorName: "Amber",
@@ -27,8 +27,25 @@ class AddEmployee extends Component {
         supervisorStatus: false,
         visaCard: true,
         cityHallParkingPass: true
+    } */
+    newEmployee = {
+        name: "Lauren Ipsum",
+        startDate: "12/2/2019",
+        supervisorName: "Amber",
+        email: "lipsum@lawrenceks.org",
+        employeeID: "323456",
+        position: "MSO Operations Technician Generalist",
+        workgroup: "Internal Services",
+        hiringManager: "Amber",
+        location: "WWTP",
+        positionPosted: "11/18/2019",
+        accountLine: "501-7-7100-1021",
+        exempt: false,
+        supervisorStatus: false,
+        visaCard: true,
+        cityHallParkingPass: true
     }
-    /* constructor(props){
+    constructor(props){
         super(props);
         this.state = {
             name: "Janice Wallace",
@@ -47,13 +64,17 @@ class AddEmployee extends Component {
         visaCard: true,
         cityHallParkingPass: true
         }
-    } */
+    }
     submitEmployee = event => {
         //Need to find out how information can be save via input forms in react
+
         api.addEmployee(this.state)
             .then(
                 console.log("It worked!"),
                 console.log(this.state)
+            )
+            .then(
+                window.location.href="/"
             )
     }
     render() {
