@@ -38,7 +38,7 @@ const NewEmployeeForm =(props) =>{
                     <FormGroup row>
                     <Label for="name" sm={2} size="lg">Name:</Label>
                     <Col>
-                    <Input id="name" ></Input>
+                    <Input id="name" name="name"></Input>
                     </Col>
                     </FormGroup>
                     <FormGroup row>

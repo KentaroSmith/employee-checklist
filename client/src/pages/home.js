@@ -18,7 +18,7 @@ class Homepage extends Component {
             .then(Response => {
                 employeeList.push(Response.data);
                 this.setState({allEmployees:employeeList[0]})
-                console.log(employeeList)
+                console.log(employeeList[0])
             });
     }
     render() {
@@ -35,6 +35,9 @@ class Homepage extends Component {
                             <th>Name</th>
                             <th>Position</th>
                             <th>Email</th>
+                            <th>Workgroup</th>
+                            <th>Location</th>
+                            <th>Devices</th>
                         </tr>
                     </thead>
                 {this.state.allEmployees.length === 0 ? "":
@@ -45,6 +48,9 @@ class Homepage extends Component {
                     position={employee.position}
                     email={employee.email}
                     id={employee.employeeID}
+                    workgroup={employee.workgroup}
+                    location={employee.location}
+                    devices={employee.devices}
                     />
                             
                 ))}

@@ -1,6 +1,6 @@
 import React from "react";
 
-const ViewAll = ({name,position,email,id}) => {
+const ViewAll = ({name,position,email,id, workgroup, location, devices}) => {
     return (
 
             <tbody>
@@ -9,6 +9,9 @@ const ViewAll = ({name,position,email,id}) => {
                     <td> {name} </td>
                     <td> {position} </td>
                     <td> {email} </td>
+                    <td> {workgroup} </td>
+                    <td> {location} </td>
+                    <td> {devices} </td>
                 </tr>
             </tbody>
 
