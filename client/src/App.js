@@ -5,6 +5,7 @@ import './assets/css/style.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Homepage from "./pages/home";
 import Employee from "./pages/add";
+import EmployeeByID from "./pages/employeeID"
 import { Container, Navbar, NavItem, NavbarBrand, Nav, NavLink } from "reactstrap"
 class App extends Component {
   render() {
@@ -22,6 +23,7 @@ class App extends Component {
           <div>
             <Route exact path="/" component={Homepage} />
             <Route exact path="/employee" component={Employee} />
+            <Route exact path="/employeeID" component={EmployeeByID}/>
           </div>
         </Router>
       </Container>
