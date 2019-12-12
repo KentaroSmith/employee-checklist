@@ -6,7 +6,7 @@ import {
     Jumbotron,
     Table
 } from "reactstrap"
-import { thisExpression } from "@babel/types";
+
 class Homepage extends Component {
     state = {
         allEmployees:[]
