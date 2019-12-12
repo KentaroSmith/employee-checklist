@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-import { Button } from "reactstrap";
-import NewEmployeeForm from "../components/form"
 import api from "../utils/api";
 import {
+    Button,
     Jumbotron,
     Input,
     Form,
@@ -147,19 +146,19 @@ class AddEmployee extends Component {
                     value={this.state.workgroup}
                     onChange={this.handleInputChange}
                     >
-                        <option value="water">
+                        <option value="Water Utilities">
                         Water Utilities
                         </option>
-                        <option value="sewer">
+                        <option value="Sewer Utilities">
                         Sewer Utilities
                         </option>
-                        <option value="streets">
+                        <option value="Streets Department">
                         Streets
                         </option>
-                        <option value="traffic">
+                        <option value="Traffic Department">
                         Traffic
                         </option>
-                        <option value="solid waste">
+                        <option value="Solid Waste">
                         Solid Waste
                         </option>
                         <option value="internal services">
@@ -190,22 +189,22 @@ class AddEmployee extends Component {
                     value={this.state.location}
                     onChange={this.handleInputChange}
                     >
-                    <option value="kaw">
+                    <option value="Kaw Water Treatment Plant">
                         Kaw Water Treatment Plant
                         </option>
-                        <option value="wwtp">
+                        <option value="WWTP">
                         WWTP
                         </option>
-                        <option value="streets">
+                        <option value="Streets">
                         Streets
                         </option>
-                        <option value="traffic">
+                        <option value="Traffic">
                         Traffic
                         </option>
-                        <option value="solid waste">
+                        <option value="Solid Waste">
                         Solid Waste
                         </option>
-                        <option value="city hall">
+                        <option value="City Hall">
                         City Hall
                         </option>
                     </Input>
@@ -249,7 +248,7 @@ class AddEmployee extends Component {
                     
                     
                     <FormGroup row check id="supervisorStatus" >
-                    <Label for="supervisor" sm={2} size="lg">Supervisor:</Label>
+                    <Label for="supervisorStatus" sm={2} size="lg">Supervisor:</Label>
                         <Input 
                         type="checkbox" 
                         name="supervisorStatus" 
@@ -279,9 +278,9 @@ class AddEmployee extends Component {
                     
                     {/*end of form*/}
                 </Form>
-           
+                <Button color="primary" id="submit" onClick={this.submitEmployee} >Submit</Button>  
         </Jumbotron>       
-                <Button color="primary" id="submit" onClick={this.submitEmployee} >Submit</Button>
+                
             </div>
         )
     }

@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import ViewAll from "../components/viewAll";
 import api from "../utils/api";
 import {
-    Button,
     Jumbotron,
     Table
 } from "reactstrap"
@@ -27,7 +26,7 @@ class Homepage extends Component {
             <div id="home" >
                 <Jumbotron>
                     {this.findall()}
-               <span> <h1>Employee Info Dashboard</h1><Button onClick={this.findall}>Show all Employees this button is redundant, remove later</Button></span>
+               <span> <h1>Employee Info Dashboard</h1></span>
                <Table dark bordered striped hover size="sm">
                     <thead>
                         <tr>
