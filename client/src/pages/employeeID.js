@@ -33,12 +33,21 @@ render(){
                     
                     <ViewOne
                     name={this.state.employee.name}
+                    startDate={this.state.employee.startDate}
+                    positionPosted={this.state.employee.positionPosted}
+                    accountLine={this.state.employee.accountLine}
+                    supervisorName={this.state.employee.supervisorName}
+                    hiringManager={this.state.employee.hiringManager}
                     position={this.state.employee.position}
                     email={this.state.employee.email}
                     id={this.state.employee.employeeID}
                     workgroup={this.state.employee.workgroup}
                     location={this.state.employee.location}
                     devices={this.state.employee.devices}
+                    exempt={this.state.employee.exempt}
+                    supervisorStatus={this.state.employee.supervisorStatus}
+                    visaCard={this.state.employee.visaCard}
+                    cityHallParkingPass={this.state.employee.cityHallParkingPass}
                     />
 
            
