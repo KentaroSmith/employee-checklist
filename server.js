@@ -16,7 +16,7 @@ if (process.env.NODE_ENV === "production") {
 // Connect to the Mongo DB
 //If using Mongo for deployment leave as process.env.MONGODB_URI
 //if running on local server set as || "mongodb://localhost/checklist"
-var MONGODB_URI = process.env.MONGODB_URI;
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/checklist";
 mongoose.connect(MONGODB_URI);
 
 // Define API routes 
