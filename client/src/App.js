@@ -23,7 +23,7 @@ class App extends Component {
           <div>
             <Route exact path="/" component={Homepage} />
             <Route exact path="/employee" component={Employee} />
-            <Route exact path="/employeeID" component={EmployeeByID}/>
+            <Route exact path="/employeeID/:id" component={EmployeeByID}/>
           </div>
         </Router>
       </Container>

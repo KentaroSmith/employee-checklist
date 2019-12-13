@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import ViewAll from "../components/viewAll";
+import ViewOne from "../components/viewOne";
 import api from "../utils/api";
 import {
     Jumbotron
@@ -14,12 +14,13 @@ constructor(props){
 
 }
 findone = () => {
-    let theone = {}
-    api.getOneEmployee()
+    let param = window.location.href
+    let idNum = param.substr(33)
+    let theone={}
+    api.getOneEmployee(idNum)
         .then(Response => {
-            theone.push(Response.data);
-            this.setState({employee:theone[0]})
-            console.log(theone[0])
+            theone=(Response.data);
+            this.setState({employee:theone})
         });
 }
 render(){
@@ -27,7 +28,18 @@ render(){
     <div>
         <Jumbotron>
             {this.findone()}
-            Test
+                    
+                    <ViewOne
+                    name={this.state.employee.name}
+                    position={this.state.employee.position}
+                    email={this.state.employee.email}
+                    id={this.state.employee.employeeID}
+                    workgroup={this.state.employee.workgroup}
+                    location={this.state.employee.location}
+                    devices={this.state.employee.devices}
+                    />
+
+           
         </Jumbotron>
     </div>
     )

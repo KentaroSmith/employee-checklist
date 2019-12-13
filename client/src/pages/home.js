@@ -41,8 +41,8 @@ class Homepage extends Component {
                     </thead>
                 {this.state.allEmployees.length === 0 ? "":
                 this.state.allEmployees.map(employee =>(
-                    
                     <ViewAll 
+                    _id={employee._id}
                     name={employee.name}
                     position={employee.position}
                     email={employee.email}
