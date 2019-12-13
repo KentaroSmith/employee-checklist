@@ -15,7 +15,9 @@ constructor(props){
 }
 findone = () => {
     let param = window.location.href
-    let idNum = param.substr(33)
+    //this worked locally only because localhost:3000 was the url
+    //This grabs the last 24 characters in the string and sets it as idNum for getOneEmployee to use as a search parameter
+    let idNum = param.substr(param.length-24,param.length)
     let theone={}
     api.getOneEmployee(idNum)
         .then(Response => {
