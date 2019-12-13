@@ -53,7 +53,7 @@ const employeeSchema = new Schema({
     employeeID:{
         type:Number,
         required:true,
-        minlength:6,
+        minlength:5,
         unique: true
     },
     email:{
