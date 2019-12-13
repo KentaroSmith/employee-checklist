@@ -161,7 +161,7 @@ class AddEmployee extends Component {
                         <option value="Solid Waste">
                         Solid Waste
                         </option>
-                        <option value="internal services">
+                        <option value="Internal Services">
                         Internal Services
                         </option>
                     </Input>

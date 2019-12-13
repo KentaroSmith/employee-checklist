@@ -18,13 +18,15 @@ const ViewAll = ({
     visaCard,
     cityHallParkingPass
 }) => {
-    let creditCard;
-    if (visaCard){
-        creditCard= "True"
+    const itemBoolean = function(item){
+        if (item){
+            return("True")
+        }
+        else{
+            return("False")
+        }
     }
-    else{
-        creditCard= "False"
-    }
+
     return (
 
             <div>
@@ -40,10 +42,10 @@ const ViewAll = ({
                     <h3>WorkGroup: {workgroup} </h3>
                     <h3>Primary Work Location {location} </h3>
                     <h3>Assigned Devices: {devices} </h3>
-                    <h5>Are they Exempt?{exempt}</h5>
-                    <h5>Are they a supervisor?{supervisorStatus}</h5>
-                    <h5>Do they have a Visa? {creditCard}</h5>
-                    <h5>Do they have a Parking Pass?{cityHallParkingPass}</h5>
+                    <h5>Are they Exempt? {itemBoolean(exempt)}</h5>
+                    <h5>Are they a supervisor? {itemBoolean(supervisorStatus)}</h5>
+                    <h5>Do they have a Visa? {itemBoolean(visaCard)}</h5>
+                    <h5>Do they have a Parking Pass? {itemBoolean(cityHallParkingPass)}</h5>
                 
             </div>
 

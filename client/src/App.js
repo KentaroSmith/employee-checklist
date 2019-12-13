@@ -6,11 +6,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Homepage from "./pages/home";
 import Employee from "./pages/add";
 import EmployeeByID from "./pages/employeeID"
-import { Container, Navbar, NavItem, NavbarBrand, Nav, NavLink } from "reactstrap"
+import { Navbar, NavItem, NavbarBrand, Nav, NavLink } from "reactstrap"
 class App extends Component {
   render() {
     return (
-      <Container>
+      <div>
+{/*I removed the Container element, made everything too claustrophobic*/}
         <Navbar color="dark" dark expand="md">
           <NavbarBrand href="/">Home</NavbarBrand>
           <Nav>
@@ -19,14 +20,15 @@ class App extends Component {
             </NavItem>
           </Nav>
         </Navbar>
-        <Router>
+
+      <Router>
           <div>
             <Route exact path="/" component={Homepage} />
             <Route exact path="/employee" component={Employee} />
             <Route exact path="/employeeID/:id" component={EmployeeByID}/>
           </div>
         </Router>
-      </Container>
+      </div>
     )
   }
 }
