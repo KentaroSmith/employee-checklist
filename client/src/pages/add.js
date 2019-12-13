@@ -39,9 +39,9 @@ class AddEmployee extends Component {
                 console.log("It worked!"),
                 console.log(this.state)
             )
-            .then(
+/*             .then(
                 window.location.href="/"
-            )
+            ) */
     }
     handleInputChange(event){
         const target = event.target;
