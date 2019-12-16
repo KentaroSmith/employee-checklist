@@ -7,7 +7,11 @@ import {
     Form,
     FormGroup,
     Label,
-    Col
+    Row,
+    Col,
+    Card,
+    CardBody,
+    CardHeader
 } from "reactstrap";
 class AddEmployee extends Component {
     constructor(props){
@@ -53,16 +57,33 @@ class AddEmployee extends Component {
     }
 
     render() {
+const checkboxesStyle = {
+    display: 'inline',
+    position: 'relative',
+    float:"left",
+    height: '25px',
+    width: '25px',
+    backgroundColor: '#eee',
+    marginLeft:"0rem"
+}
+
         return (
             <div id="add">
                 <Jumbotron>
-            <h1>New Hire Checklist</h1>
-            
-                <h3>Employee info</h3>
+                    <Card inverse color="primary">
+                        <CardHeader><h1>New Hire Checklist</h1></CardHeader>
+                    </Card>
+
+                <Row>
                 <Form>
-                    <FormGroup row>
-                    <Label for="name" sm={2} size="lg">Name:</Label>
+                
                     <Col>
+                    <Card inverse style={{ backgroundColor: '#333', borderColor: '#333' }}>
+                        <CardHeader><h3>Employee information</h3></CardHeader>
+                        <CardBody>
+                        <FormGroup row>
+                    <Label for="name"  size="lg">Name:</Label>
+                    
                     <Input 
                     id="name" 
                     name="name" 
@@ -70,11 +91,11 @@ class AddEmployee extends Component {
                     value={this.state.name} 
                     onChange={this.handleInputChange}
                     ></Input>
-                    </Col>
+                    
                     </FormGroup>
                     <FormGroup row>
-                    <Label for="start" sm={2} size="lg">Start Date:</Label>
-                    <Col>
+                    <Label for="start" size="lg">Start Date:</Label>
+                   
                     <Input 
                     id="start" 
                     type="date" 
@@ -82,11 +103,11 @@ class AddEmployee extends Component {
                     value={this.state.startDate}
                     onChange={this.handleInputChange}
                     ></Input>
-                    </Col>
+                  
                     </FormGroup>
                     <FormGroup row>
-                    <Label for="supervisor" sm={2} size="lg">Supervisor:</Label>
-                    <Col>
+                    <Label for="supervisor"  size="lg">Supervisor:</Label>
+                    
                     <Input 
                     id="supervisor" 
                     type="text"
@@ -94,11 +115,11 @@ class AddEmployee extends Component {
                     value={this.state.supervisorName}
                     onChange={this.handleInputChange}
                     ></Input>
-                    </Col>
+                    
                     </FormGroup>
                     <FormGroup row>
-                    <Label for="email" sm={2} size="lg">Email:</Label>
-                    <Col>
+                    <Label for="email" size="lg">Email:</Label>
+                    
                     <Input 
                     id="email" 
                     type="email" 
@@ -106,11 +127,11 @@ class AddEmployee extends Component {
                     value={this.state.email}
                     onChange={this.handleInputChange}
                     ></Input>
-                    </Col>
+                  
                     </FormGroup>
                     <FormGroup row>
-                    <Label for="employeeID" sm={2} size="lg">Employee ID:</Label>
-                    <Col>
+                    <Label for="employeeID" size="lg">Employee ID:</Label>
+                    
                     <Input 
                     id="employeeID" 
                     type="number"
@@ -118,15 +139,25 @@ class AddEmployee extends Component {
                     value={this.state.employeeID}
                     onChange={this.handleInputChange}
                     ></Input>
-                    </Col>
+                   
                     </FormGroup>
+
+                        </CardBody>
+                    </Card>
+                    
+
+                    </Col>
                 </Form>
 
-                <h3>Position information</h3>
+                
                 <Form>
-                    <FormGroup row>
-                    <Label for="position" sm={2} size="lg">Position:</Label>
                     <Col>
+                    <Card inverse style={{ backgroundColor: '#333', borderColor: '#333' }}>
+                        <CardHeader><h3>Position information</h3></CardHeader>
+                        <CardBody>
+                        <FormGroup row>
+                    <Label for="position"  size="lg">Position:</Label>
+                    
                     <Input 
                     id="position" 
                     type="text"
@@ -134,11 +165,11 @@ class AddEmployee extends Component {
                     value={this.state.position}
                     onChange={this.handleInputChange}
                     ></Input>
-                    </Col>
+                    
                     </FormGroup>
                     <FormGroup row>
-                    <Label for="workgroup" sm={2} size="lg">Workgroup:</Label>
-                    <Col>
+                    <Label for="workgroup"  size="lg">Workgroup:</Label>
+                    
                     <Input 
                     type="select" 
                     id="workgroup" 
@@ -165,11 +196,11 @@ class AddEmployee extends Component {
                         Internal Services
                         </option>
                     </Input>
-                    </Col>
+                    
                     </FormGroup>
                     <FormGroup row>
-                    <Label for="hiringManager" sm={2} size="lg">Hiring Manager:</Label>
-                    <Col>
+                    <Label for="hiringManager"  size="lg">Hiring Manager:</Label>
+                    
                     <Input 
                     id="hiringManager"
                     type="text"
@@ -177,11 +208,11 @@ class AddEmployee extends Component {
                     value={this.state.hiringManager}
                     onChange={this.handleInputChange}
                     ></Input>
-                    </Col>
+                   
                     </FormGroup>
                     <FormGroup row>
-                    <Label for="location" sm={2} size="lg">Location:</Label>
-                    <Col>
+                    <Label for="location"  size="lg">Location:</Label>
+                  
                     <Input 
                     id="location" 
                     type="select"
@@ -208,11 +239,11 @@ class AddEmployee extends Component {
                         City Hall
                         </option>
                     </Input>
-                    </Col>
+                    
                     </FormGroup>
                     <FormGroup row>
-                    <Label for="positionPosted" sm={2} size="lg">Position Posted:</Label>
-                    <Col>
+                    <Label for="positionPosted"  size="lg">Position Posted:</Label>
+                  
                     <Input 
                     id="positionPosted" 
                     type="date"
@@ -220,11 +251,11 @@ class AddEmployee extends Component {
                     value={this.state.positionPosted}
                     onChange={this.handleInputChange}
                     ></Input>
-                    </Col>
+                   
                     </FormGroup>
                     <FormGroup row>
-                    <Label for="accountLine" sm={2} size="lg">Account Line:</Label>
-                    <Col>
+                    <Label for="accountLine" size="lg">Account Line:</Label>
+                   
                     <Input 
                     id="accountLine" 
                     type="text" 
@@ -232,53 +263,96 @@ class AddEmployee extends Component {
                     value={this.state.accountLine}
                     onChange={this.handleInputChange}
                     ></Input>
-                    </Col>
-                    </FormGroup>
-                   
                     
-                    <FormGroup row check id="exempt" >
-                    <Label for="exempt" sm={2} size="lg">Exempt:</Label>
-                        <Input 
+                    </FormGroup>
+                        </CardBody>
+                    </Card>
+                    
+
+                    </Col>
+                    </Form>
+                    
+                    
+                    <Form>
+                   
+                    <Col>
+                    <Card inverse style={{ backgroundColor: '#333', borderColor: '#333' }}>
+                        <CardHeader><h3>Special Permissions</h3></CardHeader>
+                        <CardBody><FormGroup  check  >
+                    <Label for="exempt" size="lg">Exempt
+                    <Input 
+                        id="exempt"
+                        style={checkboxesStyle}
                         type="checkbox" 
                         name="exempt" 
                         value={this.state.exempt}
                         onChange={this.handleInputChange}
-                        class="checkbox"/>{' '}      
+                        className="checkbox"/>{' '}   
+                    </Label>
+                 
                     </FormGroup>
-                    
-                    
-                    <FormGroup row check id="supervisorStatus" >
-                    <Label for="supervisorStatus" sm={2} size="lg">Supervisor:</Label>
-                        <Input 
+                   
+                    <FormGroup  check id="supervisorStatus" >
+                    <Label for="supervisorStatus" size="lg">Supervisor
+                    <Input 
+                        style={checkboxesStyle}
                         type="checkbox" 
                         name="supervisorStatus" 
                         value={this.state.supervisorStatus}
                         onChange={this.handleInputChange}
-                        class="radio"/>{' '}      
+                        className="checkbox"/>{' '}      
+                    </Label>
+                        
                     </FormGroup>
-                    
-                    <FormGroup row check id="visa" >
-                    <Label for="visa" sm={2} size="lg">Visa Card:</Label>
-                        <Input 
+                  
+                    <FormGroup  check  >
+                    <Label for="visa" size="lg">Visa Card
+                    <Input 
+                        style={checkboxesStyle}
+                        id="visa"
                         type="checkbox" 
                         name="visaCard" 
                         value={this.state.visaCard}
                         onChange={this.handleInputChange}
-                        class="radio"/>{' '}
+                        className="checkbox"/>{' '}
+                    </Label>
+                        
                     </FormGroup>
-                    <FormGroup row check id="cityHallParkingPass" >
-                    <Label for="cityHallParkingPass" sm={2} size="lg">City Hall Parking Pass:</Label>
-                        <Input 
+                  
+                    <FormGroup  check id="cityHallParkingPass" >
+                    <Label for="cityHallParkingPass"  size="lg">City Hall Parking Pass
+                    <Input 
+                        style={checkboxesStyle}
                         type="checkbox" 
                         name="cityHallParkingPass" 
                         value={this.state.cityHallParkingPass}
                         onChange={this.handleInputChange}
-                        class="radio"/>{' '}
-                    </FormGroup>
+                        className="checkbox"/>{' '}
                     
+                    </Label>
+          
+                    </FormGroup></CardBody>
+                    </Card>
+                    <Card inverse style={{ backgroundColor: '#333', borderColor: '#333' }}>
+                        <CardHeader><h3>Requested Software</h3></CardHeader>
+                        <CardBody>
+
+                        </CardBody>
+                    </Card>
+                    </Col>
+                    <Col>
+                    
+                    <Card inverse style={{ backgroundColor: '#333', borderColor: '#333' }}>
+                        <CardHeader><h3>Requested Devices</h3></CardHeader>
+                        <CardBody>
+
+                        </CardBody>
+                    </Card>
+                    </Col>
                     {/*end of form*/}
                 </Form>
-                <Button color="primary" id="submit" onClick={this.submitEmployee} >Submit</Button>  
+                </Row>
+                <Button color="primary" size="lg" id="submit" onClick={this.submitEmployee} >Submit</Button>  
         </Jumbotron>       
                 
             </div>

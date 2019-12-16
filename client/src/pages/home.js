@@ -36,7 +36,7 @@ class Homepage extends Component {
                             <th>Email</th>
                             <th>Workgroup</th>
                             <th>Location</th>
-                            <th>Devices</th>
+                            <th>Start Date</th>
                         </tr>
                     </thead>
                 {this.state.allEmployees.length === 0 ? "":
@@ -49,7 +49,7 @@ class Homepage extends Component {
                     id={employee.employeeID}
                     workgroup={employee.workgroup}
                     location={employee.location}
-                    devices={employee.devices}
+                    startDate={employee.startDate}
                     />
                             
                 ))}
