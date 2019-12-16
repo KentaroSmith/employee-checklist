@@ -69,6 +69,14 @@ const employeeSchema = new Schema({
         type:Boolean,
         required:true
     },
+    requestedSoftware:{
+        type: Array,
+        required:false
+    },
+    notes:{
+        type: String,
+        required: false
+    }
 });
 
 const Employee = mongoose.model("Employee",employeeSchema);
