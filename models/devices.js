@@ -27,6 +27,10 @@ const deviceSchema = new Schema({
         type: String,
         required: false
     },
+    active:{
+        type:Boolean,
+        required:true
+    },
     dataPlan:{
         type:Boolean,
         required:true
@@ -38,6 +42,10 @@ const deviceSchema = new Schema({
     type:{
         type:String,
         required:true
+    },
+    location:{
+        type:String,
+        required:true 
     }
 })
 
