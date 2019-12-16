@@ -39,12 +39,12 @@ const ViewAll = ({
                         <Row>
                             <Col>
                             <Card inverse style={{ backgroundColor: '#333', borderColor: '#333' }}>
-                            <CardHeader><h1>{name}</h1></CardHeader>
+                            <CardHeader><h1>{name} <div id="start">Start Date: <Moment format="MM/DD/YYYY" >{startDate}</Moment></div></h1></CardHeader>
                             <CardBody>
                     <h3>Employee ID# {id} </h3>
                     <h3>Position Title: {position} </h3>
                     <h3>Account Line: {accountLine}</h3>
-                    <h5>Position was posted: <Moment format="MM/DD/YYYY">{positionPosted}</Moment>  Start Date: <Moment format="MM/DD/YYYY">{startDate}</Moment></h5>
+                    <h5>Position was posted: <Moment format="MM/DD/YYYY">{positionPosted}</Moment></h5>
                     <h5>Direct Supervisor: {supervisorName} </h5>
                     <h5>Hiring Manager: {hiringManager} </h5>
                     <h3>City Email: <a href={"mailto:"+email}> {email} </a></h3>

@@ -70,7 +70,7 @@ const checkboxesStyle = {
         return (
             <div id="add">
                 <Jumbotron>
-                    <Card inverse color="primary">
+                    <Card inverse id="checklistBanner">
                         <CardHeader><h1>New Hire Checklist</h1></CardHeader>
                     </Card>
 

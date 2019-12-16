@@ -10,7 +10,7 @@ import { Navbar, NavItem, NavbarBrand, Nav, NavLink } from "reactstrap"
 class App extends Component {
   render() {
     return (
-      <div>
+      <div id="wrapper">
 {/*I removed the Container element, made everything too claustrophobic*/}
         <Navbar color="dark" dark expand="md">
           <NavbarBrand href="/">Home</NavbarBrand>

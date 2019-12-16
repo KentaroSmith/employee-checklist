@@ -4,7 +4,7 @@ import Moment from "react-moment";
 const ViewAll = ({name,position,email,id, workgroup, location, startDate,_id}) => {
     return (
 
-            <tbody>
+            <tbody class="employeeData">
                 <tr>
                     <th scope="row"><a href={"/employeeID/"+_id}> {id} </a></th>
                     <td> {name} </td>

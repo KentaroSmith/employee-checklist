@@ -1,3 +1,31 @@
-.radio{
-    margin-left: 20px;
+body{
+    background-color: rgba(177, 177, 177, 0.541) !important;
+    color: black;
 }
+.employeeData{
+    background-color: rgb(49, 43, 43);
+    color: black;
+}
+.employeeData a{
+    color: rgba(0, 81, 255, 0.678);
+}
+.card-body{
+    background-color: rgb(49, 43, 43);
+    color: black;
+}
+.card-header{
+    color: black;
+}
+.card-body a{
+    color: rgba(0, 81, 255, 0.678);
+}
+.form-control{
+    background-color: rgba(255, 255, 255, 0.664) !important;
+}
+#checklistBanner{
+    background-color: rgba(51,51,51);
+}
+#start{
+    float: right;
+}
+/* this is just to test applying styles to all of the pages. Color scheme will change*/
