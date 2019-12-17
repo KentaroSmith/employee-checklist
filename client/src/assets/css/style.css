@@ -2,23 +2,24 @@ body{
     background-color: rgba(177, 177, 177, 0.541) !important;
     color: black;
 }
-.employeeData{
-    background-color: rgba(49, 43, 43, 0.678);
+/* .employeeData{
+    background-color: rgba(73, 64, 64, 0.678);
     color: black;
-}
-.employeeData a{
+} */
+/* .employeeData a{
     color: rgba(0, 81, 255, 0.678);
-}
+} */
 .card-body{
-    background-color: rgb(49, 43, 43, 0.678);
+    background-color: rgba(87, 76, 76, 0.678);
     color: black;
 }
 .card-header{
-    color: black;
+    background-color: navy !important;
+    color: rgba(255, 255, 255, 0.664);
 }
-.card-body a{
+/* .card-body a{
     color: rgba(0, 81, 255, 0.678);
-}
+} */
 .form-control{
     background-color: rgba(255, 255, 255, 0.664) !important;
 }
