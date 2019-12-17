@@ -292,10 +292,11 @@ const checkboxesStyle = {
                  
                     </FormGroup>
                    
-                    <FormGroup  check id="supervisorStatus" >
+                    <FormGroup  check  >
                     <Label for="supervisorStatus" size="lg">Supervisor
                     <Input 
                         style={checkboxesStyle}
+                        id="supervisorStatus"
                         type="checkbox" 
                         name="supervisorStatus" 
                         value={this.state.supervisorStatus}
@@ -319,10 +320,11 @@ const checkboxesStyle = {
                         
                     </FormGroup>
                   
-                    <FormGroup  check id="cityHallParkingPass" >
+                    <FormGroup  check  >
                     <Label for="cityHallParkingPass"  size="lg">City Hall Parking Pass
                     <Input 
                         style={checkboxesStyle}
+                        id="cityHallParkingPass"
                         type="checkbox" 
                         name="cityHallParkingPass" 
                         value={this.state.cityHallParkingPass}
@@ -336,7 +338,9 @@ const checkboxesStyle = {
                     <Card inverse style={{ backgroundColor: '#333', borderColor: '#333' }}>
                         <CardHeader><h3>Requested Software</h3></CardHeader>
                         <CardBody>
-
+                        {/*Considering addapting this for dynamically creating checkboxes
+                        https://stackoverflow.com/questions/36205673/how-do-i-create-a-dynamic-drop-down-list-with-react-bootstrap
+                        */}
                         </CardBody>
                     </Card>
                     </Col>
