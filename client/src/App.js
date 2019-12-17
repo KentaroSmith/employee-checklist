@@ -8,6 +8,7 @@ import Employee from "./pages/add";
 import EmployeeByID from "./pages/employeeID";
 import Device from "./pages/deviceAdd";
 import AllDevices from "./pages/allDevices";
+import OneDevice from "./pages/deviceID"
 import { Navbar, NavItem, NavbarBrand, Nav, NavLink } from "reactstrap";
 class App extends Component {
   render() {
@@ -36,6 +37,7 @@ class App extends Component {
             <Route exact path="/employeeID/:id" component={EmployeeByID}/>
             <Route exact path="/device" component={Device}/>
             <Route exact path="/allDevices" component={AllDevices}/>
+            <Route exact path="/deviceID/:id" component={OneDevice}/>
           </div>
         </Router>
       </div>

@@ -14,7 +14,7 @@ export default {
         return axios.get("/api/device");
     },
     getOneDevice: function(id){
-        return axios.get("/api/device"+id);
+        return axios.get("/api/device/"+id);
     },
     addDevice: function(data){
         return axios.post("/api/device",data);

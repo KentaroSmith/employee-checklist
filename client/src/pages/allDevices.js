@@ -17,16 +17,17 @@ class Homepage extends Component {
             .then(Response => {
                 deviceList.push(Response.data);
                 this.setState({allDevices:deviceList[0]})
-                console.log(deviceList[0])
+                console.log(this.state.allDevices)
             });
     }
     render() {
         return (
             // review how props work to make sure data is passing through correctly
             <div id="home" >
+                
                 <Jumbotron>
-                    {this.findall()}
-               <span> <h1>Device Inventory</h1></span>
+                {this.findall()}
+               <span><h1>Device Inventory</h1></span>
                <Table dark bordered striped hover size="sm">
                     <thead>
                         <tr>
