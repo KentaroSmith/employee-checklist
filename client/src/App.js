@@ -7,13 +7,14 @@ import Homepage from "./pages/home";
 import Employee from "./pages/add";
 import EmployeeByID from "./pages/employeeID";
 import Device from "./pages/deviceAdd";
+import AllDevices from "./pages/allDevices";
 import { Navbar, NavItem, NavbarBrand, Nav, NavLink } from "reactstrap";
 class App extends Component {
   render() {
     return (
       <div id="wrapper">
 {/*I removed the Container element, made everything too claustrophobic*/}
-        <Navbar color="dark" dark expand="md">
+        <Navbar /* color="dark" */ dark expand="md">
           <NavbarBrand href="/">Home</NavbarBrand>
           <Nav>
             <NavItem>
@@ -21,6 +22,9 @@ class App extends Component {
             </NavItem>
             <NavItem>
               <NavLink href="/device">Add New Device</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/allDevices">View all Devices</NavLink>
             </NavItem>
           </Nav>
         </Navbar>
@@ -30,7 +34,8 @@ class App extends Component {
             <Route exact path="/" component={Homepage} />
             <Route exact path="/employee" component={Employee} />
             <Route exact path="/employeeID/:id" component={EmployeeByID}/>
-            <Route exact path ="/device" component={Device}/>
+            <Route exact path="/device" component={Device}/>
+            <Route exact path="/allDevices" component={AllDevices}/>
           </div>
         </Router>
       </div>

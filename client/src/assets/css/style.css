@@ -3,14 +3,14 @@ body{
     color: black;
 }
 .employeeData{
-    background-color: rgb(49, 43, 43);
+    background-color: rgba(49, 43, 43, 0.678);
     color: black;
 }
 .employeeData a{
     color: rgba(0, 81, 255, 0.678);
 }
 .card-body{
-    background-color: rgb(49, 43, 43);
+    background-color: rgb(49, 43, 43, 0.678);
     color: black;
 }
 .card-header{
@@ -27,5 +27,8 @@ body{
 }
 #start{
     float: right;
+}
+.navbar{
+    background-color: navy !important;
 }
 /* this is just to test applying styles to all of the pages. Color scheme will change*/

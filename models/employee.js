@@ -61,6 +61,10 @@ const employeeSchema = new Schema({
         required:true,
         unique:true
     },
+    requestedDevices:{
+        type:String,
+        required: false
+    },
     devices:{
         type:Array,
         required:false
@@ -72,6 +76,10 @@ const employeeSchema = new Schema({
     requestedSoftware:{
         type: Array,
         required:false
+    },
+    software:{
+        type:String,
+        required: false
     },
     notes:{
         type: String,
