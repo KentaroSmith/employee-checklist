@@ -19,4 +19,13 @@ export default {
     addDevice: function(data){
         return axios.post("/api/device",data);
     },
+    geSoftware: function(){
+        return axios.get("/api/software");
+    },
+    getOneSoftware: function(id){
+        return axios.get("/api/software/"+id);
+    },
+    addSoftware: function(data){
+        return axios.post("/api/software",data);
+    },
 };
