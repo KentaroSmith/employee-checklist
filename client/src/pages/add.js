@@ -31,14 +31,17 @@ class AddEmployee extends Component {
         exempt: false,
         supervisorStatus: false,
         visaCard: false,
-        cityHallParkingPass: false
+        cityHallParkingPass: false,
+        newEmployee: true,
+        currentEmployee: true
         }
         this.submitEmployee = this.submitEmployee.bind(this);
         this.handleInputChange = this.handleInputChange.bind(this);
     }
     submitEmployee = event => {
     //documentation on forms in react is found here: https://reactjs.org/docs/forms.html
-        api.addEmployee(this.state)
+        if(this.state.employeeID.length>=5){
+            api.addEmployee(this.state)
             .then(
                 console.log("It worked!"),
                 console.log(this.state)
@@ -46,6 +49,10 @@ class AddEmployee extends Component {
             .then(
                 window.location.href="/"
             )
+        }
+        else{
+            alert("Employee ID must be at least 5 characters long")
+        }
     }
     handleInputChange(event){
         const target = event.target;
@@ -177,6 +184,9 @@ const checkboxesStyle = {
                     value={this.state.workgroup}
                     onChange={this.handleInputChange}
                     >
+                        <option>
+                        Please select an option
+                        </option>
                         <option value="Water Utilities">
                         Water Utilities
                         </option>
@@ -220,7 +230,10 @@ const checkboxesStyle = {
                     value={this.state.location}
                     onChange={this.handleInputChange}
                     >
-                    <option value="Kaw Water Treatment Plant">
+                        <option>
+                        Please select an option
+                        </option>
+                        <option value="Kaw Water Treatment Plant">
                         Kaw Water Treatment Plant
                         </option>
                         <option value="WWTP">
@@ -258,11 +271,61 @@ const checkboxesStyle = {
                    
                     <Input 
                     id="accountLine" 
-                    type="text" 
+                    type="select" 
                     name="accountLine"
                     value={this.state.accountLine}
                     onChange={this.handleInputChange}
-                    ></Input>
+                    >
+                        <option>
+                        Please select an option
+                        </option>
+                        <option value="1-3-3000">
+                        Street Maintenance 1-3-3000
+                        </option>
+                        <option value="1-3-3020">
+                        Traffic Engineering 1-3-3020
+                        </option>
+                        <option value="502-3-3515">
+                        Solid Waste 502-3-3515
+                        </option>
+                        <option value="505-3-3910">
+                        Stormwater Admin 505-3-3910
+                        </option>
+                        <option value="505-3-3915">
+                        Stormwater Operations 505-3-3915
+                        </option>
+                        <option value="501-7-1069">
+                        Utility Billing 501-7-1069
+                        </option>
+                        <option value="501-7-7100">
+                        Administration 501-7-7100
+                        </option>
+                        <option value="501-7-7110">
+                        Engineering 501-7-7110
+                        </option>
+                        <option value="501-7-7210">
+                        Clinton Water Plant 501-7-7210
+                        </option>
+                        <option value="501-7-7220">
+                        Kaw Water Plant 501-7-7220
+                        </option>
+                        <option value="501-7-7310">
+                        KS WWTP 501-7-7310
+                        </option>
+                        <option value="501-7-7320">
+                        WAK WWTP 501-7-7320
+                        </option>
+                        <option value="501-7-7410">
+                        Collection System 501-7-7410
+                        </option>
+                        <option value="501-7-7510">
+                        Quality Control 501-7-7510
+                        </option>
+                        <option value="501-7-7610">
+                        Distribution System 501-7-7610
+                        </option>
+
+                    </Input>
                     
                     </FormGroup>
                         </CardBody>

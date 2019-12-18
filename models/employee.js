@@ -84,6 +84,14 @@ const employeeSchema = new Schema({
     notes:{
         type: String,
         required: false
+    },
+    newEmployee:{
+        type:Boolean,
+        required: true
+    },
+    currentEmployee:{
+        type:Boolean,
+        required:true
     }
 });
 

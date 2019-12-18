@@ -6,12 +6,11 @@ import {
     Table
 } from "reactstrap"
 
-class Homepage extends Component {
+class AllEmployees extends Component {
     constructor(props){
         super(props);
         this.state={
-            allEmployees:[],
-            newEmployees:[]
+            allEmployees:[]
         }
         this.findall = this.findall.bind(this)
     }
@@ -20,14 +19,9 @@ class Homepage extends Component {
         let employeeList=[];
         api.getEmployees()
             .then(Response => {
-                Response.data.forEach((req) => {
-                    if(req.newEmployee){
-                        employeeList.push(req)
-                    }
-                });
-                /* employeeList.push(Response.data); */
-                this.setState({newEmployees:employeeList})
-                console.log(this.state.newEmployees)
+                employeeList.push(Response.data);
+                this.setState({allEmployees:employeeList[0]})
+                console.log(this.state.allEmployees)
             })
     }
     componentDidMount(){
@@ -39,7 +33,7 @@ class Homepage extends Component {
             <div id="home" >
                 <Jumbotron>
                     {/* {this.findall()} */}
-               <span> <h1>New Employee Info Dashboard</h1></span>
+               <span> <h1>All Current Employees</h1></span>
                <Table dark bordered striped hover size="sm">
                     <thead>
                         <tr>
@@ -52,8 +46,8 @@ class Homepage extends Component {
                             <th>Start Date</th>
                         </tr>
                     </thead>
-        {this.state.newEmployees.length === 0 ? "":
-                this.state.newEmployees.map(employee =>(
+        {this.state.allEmployees.length === 0 ? "":
+                this.state.allEmployees.map(employee =>(
                     <ViewAll 
                     _id={employee._id}
                     name={employee.name}
@@ -72,4 +66,4 @@ class Homepage extends Component {
         )
     }
 }
-export default Homepage;
+export default AllEmployees;

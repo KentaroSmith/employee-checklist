@@ -5,6 +5,7 @@ import './assets/css/style.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Homepage from "./pages/home";
 import Employee from "./pages/add";
+import AllEmployees from "./pages/allEmployees";
 import EmployeeByID from "./pages/employeeID";
 import Device from "./pages/deviceAdd";
 import AllDevices from "./pages/allDevices";
@@ -22,6 +23,9 @@ class App extends Component {
               <NavLink href="/employee">Add New Employee</NavLink>
             </NavItem>
             <NavItem>
+              <NavLink href="/allEmployees">View all Employees</NavLink>
+            </NavItem>
+            <NavItem>
               <NavLink href="/device">Add New Device</NavLink>
             </NavItem>
             <NavItem>
@@ -34,6 +38,7 @@ class App extends Component {
           <div>
             <Route exact path="/" component={Homepage} />
             <Route exact path="/employee" component={Employee} />
+            <Route exact path="/allEmployees" component={AllEmployees}/>
             <Route exact path="/employeeID/:id" component={EmployeeByID}/>
             <Route exact path="/device" component={Device}/>
             <Route exact path="/allDevices" component={AllDevices}/>
