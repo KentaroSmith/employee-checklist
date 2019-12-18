@@ -9,7 +9,8 @@ import AllEmployees from "./pages/allEmployees";
 import EmployeeByID from "./pages/employeeID";
 import Device from "./pages/deviceAdd";
 import AllDevices from "./pages/allDevices";
-import OneDevice from "./pages/deviceID"
+import OneDevice from "./pages/deviceID";
+import Software from "./pages/softwareAdd";
 import { Navbar, NavItem, NavbarBrand, Nav, NavLink } from "reactstrap";
 class App extends Component {
   render() {
@@ -31,6 +32,9 @@ class App extends Component {
             <NavItem>
               <NavLink href="/allDevices">View all Devices</NavLink>
             </NavItem>
+            <NavItem>
+              <NavLink href="/software">Add Software</NavLink>
+            </NavItem>
           </Nav>
         </Navbar>
 
@@ -43,6 +47,7 @@ class App extends Component {
             <Route exact path="/device" component={Device}/>
             <Route exact path="/allDevices" component={AllDevices}/>
             <Route exact path="/deviceID/:id" component={OneDevice}/>
+            <Route exact path="/software" component={Software}/>
           </div>
         </Router>
       </div>
