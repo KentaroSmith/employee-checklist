@@ -48,6 +48,7 @@ render(){
                     supervisorStatus={this.state.employee.supervisorStatus}
                     visaCard={this.state.employee.visaCard}
                     cityHallParkingPass={this.state.employee.cityHallParkingPass}
+                    requestedSoftware={this.state.employee.requestedSoftware}
                     />
 
            

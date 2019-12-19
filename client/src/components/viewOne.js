@@ -1,6 +1,7 @@
 import React from "react";
 import {Col, Row, CardBody,Card,CardHeader} from "reactstrap";
 import Moment from "react-moment";
+import api from "../utils/api"
 
 const ViewOne = ({
     name,
@@ -18,7 +19,8 @@ const ViewOne = ({
     exempt,
     supervisorStatus,
     visaCard,
-    cityHallParkingPass
+    cityHallParkingPass,
+    requestedSoftware
 }) => {
     const itemBoolean = function(item){
         if (item){
@@ -63,7 +65,7 @@ const ViewOne = ({
                             <Card inverse style={{ backgroundColor: '#333', borderColor: '#333' }}>
                             <CardHeader><h1>Pending Requests:</h1></CardHeader>
                             <CardBody>
-                                
+                                <h3>Requested Software: {requestedSoftware} </h3>
                             </CardBody>
                             </Card>
                             </Col>
