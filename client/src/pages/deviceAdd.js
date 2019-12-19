@@ -38,9 +38,9 @@ class AddDevice extends Component {
                 console.log("It worked!"),
                 console.log(this.state)
             )
-/*             .then(
-                window.location.href="/"
-            ) */
+            .then(
+                window.location.href="/allDevices"
+            )
     }
     handleInputChange(event){
         const target = event.target;

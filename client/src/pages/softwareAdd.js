@@ -64,9 +64,9 @@ class AddSoftware extends Component {
                 console.log("It worked!"),
                 console.log(this.state)
             )
-/*             .then(
-                window.location.href="/"
-            ) */
+            .then(
+                window.location.href="/allSoftware"
+            )
         }
 
         
