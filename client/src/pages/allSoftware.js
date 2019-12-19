@@ -1,27 +1,27 @@
 import React, { Component } from "react";
-import ViewAll from "../components/viewAll";
+import ViewAll from "../components/viewAllSoftware";
 import api from "../utils/api";
 import {
     Jumbotron,
     Table
 } from "reactstrap"
 
-class AllEmployees extends Component {
+class AllSoftware extends Component {
     constructor(props){
         super(props);
         this.state={
-            allEmployees:[]
+            AllSoftware:[]
         }
         this.findall = this.findall.bind(this)
     }
 
     findall = () => {
-        let employeeList=[];
-        api.getEmployees()
+        let softwareList=[];
+        api.getSoftware()
             .then(Response => {
-                employeeList.push(Response.data);
-                this.setState({allEmployees:employeeList[0]})
-                console.log(this.state.allEmployees)
+                softwareList.push(Response.data);
+                this.setState({AllSoftware:softwareList[0]})
+                console.log(this.state.AllSoftware)
             })
     }
     componentDidMount(){
@@ -32,31 +32,30 @@ class AllEmployees extends Component {
             // review how props work to make sure data is passing through correctly
             <div id="home" >
                 <Jumbotron>
-                    {/* {this.findall()} */}
-               <span> <h1>All Current Employees</h1></span>
+               <span> <h1>All Software</h1></span>
                <Table dark bordered striped hover size="sm">
                     <thead>
                         <tr>
-                            <th>Employee id #</th>
-                            <th>Name</th>
-                            <th>Position</th>
-                            <th>Email</th>
-                            <th>Workgroup</th>
-                            <th>Location</th>
-                            <th>Start Date</th>
+                            <th>Tool</th>
+                            <th>Purpose</th>
+                            <th>Status</th>
+                            <th>Vendor</th>
+                            <th>Description</th>
+                            <th>Cost</th>
+                            <th>Notes</th>
                         </tr>
                     </thead>
-        {this.state.allEmployees.length === 0 ? "":
-                this.state.allEmployees.map(employee =>(
+        {this.state.AllSoftware.length === 0 ? "":
+                this.state.AllSoftware.map(software =>(
                     <ViewAll 
-                    _id={employee._id}
-                    name={employee.name}
-                    position={employee.position}
-                    email={employee.email}
-                    id={employee.employeeID}
-                    workgroup={employee.workgroup}
-                    location={employee.location}
-                    startDate={employee.startDate}
+                    _id={software._id}
+                    Tool={software.Tool}
+                    Purpose={software.Purpose}
+                    Status={software.Status}
+                    Vendor={software.Vendor}
+                    Description={software.Description}
+                    Cost={software.Cost2019}
+                    Notes={software.Notes}
                     />
                             
                 ))}
@@ -66,4 +65,4 @@ class AllEmployees extends Component {
         )
     }
 }
-export default AllEmployees;
+export default AllSoftware;

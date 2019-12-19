@@ -14,6 +14,8 @@ import {
     CardHeader
 } from "reactstrap";
 class AddSoftware extends Component {
+    //For the state of the software page, not all fields have inputs. Not sure if
+    //all fields will be included in final schema
     constructor(props){
         super(props);
         this.state = {
@@ -26,13 +28,16 @@ class AddSoftware extends Component {
         LicenseNumber: "",
         Manager: "",
         Administrator: [],
-        /* Users: [], */
-        /* Installer: "", */
+        //Not going to add anything to users - work flow should be to add software
+        //first, then update software as users are added - keep as empty array
+        Users: [],
+        Installer: "",
         Description: "",
         Integrations: "",
-        /* StatusDetails: "", */
+        StatusDetails: "",
         Vendor: "",
-        /* Cost2019: "", */
+        //I feel like this should change in the schema to just annual cost
+        Cost2019: "",
         VendorContact: "",
         VendorPhone: "",
         VendorEmail: "",
@@ -191,7 +196,7 @@ const checkboxesStyle = {
                 <Form>
                     <Col>
                     <Card inverse style={{ backgroundColor: '#333', borderColor: '#333' }}>
-                        <CardHeader><h3>Software details</h3></CardHeader>
+                        <CardHeader><h3>Maintenance Information</h3></CardHeader>
                         <CardBody>
                         <FormGroup row>
                     <Label for="Administrator"  size="lg">Administrator:</Label>
@@ -244,18 +249,23 @@ const checkboxesStyle = {
                    
                     </FormGroup>
                     <FormGroup row>
-                    <Label for="Vendor" size="lg">Vendor:</Label>
+                    <Label for="Cost2019" size="lg">Cost:</Label>
                    
                     <Input 
-                    id="Vendor" 
+                    id="Cost2019" 
                     type="text" 
-                    name="Vendor"
-                    value={this.state.Vendor}
+                    name="Cost2019"
+                    value={this.state.Cost2019}
                     onChange={this.handleInputChange}
                     >
                     </Input>
                     
                     </FormGroup>
+                    </CardBody>
+                    </Card>
+                    </Col>
+                    </Form>
+                    
                     {/* <FormGroup row>
                     <Label for="exempt" size="lg">Exempt
                     <Input 
@@ -319,21 +329,99 @@ const checkboxesStyle = {
                         {/*Considering addapting this for dynamically creating checkboxes
                         https://stackoverflow.com/questions/36205673/how-do-i-create-a-dynamic-drop-down-list-with-react-bootstrap
                         */}
-                        </CardBody>
-                    </Card>
-                    </Col>
+                   
+                    <Form>
                     <Col>
                     
                     <Card inverse style={{ backgroundColor: '#333', borderColor: '#333' }}>
-                        <CardHeader><h3>Requested Devices</h3></CardHeader>
+                        <CardHeader><h3>Vendor Information</h3></CardHeader>
                         <CardBody>
+                    <FormGroup row>
+                    <Label for="Vendor" size="lg">Vendor Company Name:</Label>
+                   
+                    <Input 
+                    id="Vendor" 
+                    type="text" 
+                    name="Vendor"
+                    value={this.state.Vendor}
+                    onChange={this.handleInputChange}
+                    >
+                    </Input>
+                    
+                    </FormGroup>
+                    <FormGroup row>
+                        <Label for="VendorContact">Vendor Contact</Label>
+                        <Input
+                        id="VendorContact"
+                        type="text"
+                        name="VendorContact"
+                        value={this.state.VendorContact}
+                        onChange={this.handleInputChange}
+                        ></Input>
+                    </FormGroup>
+                    <FormGroup row>
+                    <Label for="VendorPhone" size="lg">Vendor Phone:</Label>
+                   
+                    <Input 
+                    id="VendorPhone" 
+                    type="tel" 
+                    name="VendorPhone"
+                    value={this.state.VendorPhone}
+                    onChange={this.handleInputChange}
+                    >
+                    </Input>
+                    
+                    </FormGroup>
+                    <FormGroup row>
+                        <Label for="VendorEmail">Vendor Email</Label>
+                        <Input
+                        id="VendorEmail"
+                        type="email"
+                        name="VendorEmail"
+                        value={this.state.VendorEmail}
+                        onChange={this.handleInputChange}
+                        ></Input>
+                    </FormGroup>
+                    
+                    <FormGroup row>
+                        <Label for="VendorDetails">Vendor Details</Label>
+                        <Input
+                        id="VendorDetails"
+                        type="textarea"
+                        name="VendorDetails"
+                        value={this.state.VendorDetails}
+                        onChange={this.handleInputChange}
+                        ></Input>
+                    </FormGroup>
                         </CardBody>
                     </Card>
                     </Col>
-                    {/*end of form*/}
-                </Form>
-                </Row>
-                <Button color="primary" size="lg" id="submit" onClick={this.submitEmployee} >Submit</Button>  
+                    </Form>
+                    <Form>
+                        <Col>
+                        <Card inverse style={{ backgroundColor: '#333', borderColor: '#333' }}>
+                        <CardHeader><h3>Misc Information</h3></CardHeader>
+                        <CardBody>
+                    <FormGroup row>
+                    <Label for="Notes" size="lg">Notes:</Label>
+                   
+                    <Input 
+                    id="Notes" 
+                    type="textarea" 
+                    name="Notes"
+                    value={this.state.Notes}
+                    onChange={this.handleInputChange}
+                    >
+                    </Input>
+                    
+                    </FormGroup>
+                    </CardBody>
+                        </Card>
+                        </Col>
+                    </Form>
+                </Row>     
+                {/*end of form*/}
+                <Button color="primary" size="lg" id="submit" onClick={this.submitSoftware} >Submit</Button>  
         </Jumbotron>       
                 
             </div>
