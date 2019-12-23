@@ -1,5 +1,5 @@
 import React from "react";
-import {Col, Row, CardBody,Card,CardHeader} from "reactstrap";
+import {Col, Row, CardBody,Card,CardHeader, Button} from "reactstrap";
 import Moment from "react-moment";
 import api from "../utils/api"
 
@@ -20,7 +20,8 @@ const ViewOne = ({
     supervisorStatus,
     visaCard,
     cityHallParkingPass,
-    requestedSoftware
+    requestedSoftware,
+    _id
 }) => {
     const itemBoolean = function(item){
         if (item){
@@ -30,7 +31,34 @@ const ViewOne = ({
             return("False")
         }
     }
-
+    const data = {
+        name,
+        position,
+        email,
+        id, 
+        workgroup, 
+        location, 
+        devices,
+        startDate,
+        positionPosted,
+        accountLine,
+        supervisorName,
+        hiringManager,
+        exempt,
+        supervisorStatus,
+        visaCard,
+        cityHallParkingPass,
+        requestedSoftware,
+        _id
+    }
+    const updateEmployee = event =>{
+        api.updateEmployee(_id, data)
+        .then(
+            console.log("Success!"),
+            console.log(data)
+            )
+    }
+    
     return (
 
             <div>
@@ -78,7 +106,7 @@ const ViewOne = ({
                     
                     
                     
-                
+                <Button color="primary" size="lg" onClick>Submit</Button>
             </div>
 
     )

@@ -49,6 +49,7 @@ render(){
                     visaCard={this.state.employee.visaCard}
                     cityHallParkingPass={this.state.employee.cityHallParkingPass}
                     requestedSoftware={this.state.employee.requestedSoftware}
+                    _id={this.state.employee._id}
                     />
 
            

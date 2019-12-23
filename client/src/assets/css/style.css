@@ -32,4 +32,11 @@ body{
 .navbar{
     background-color: navy !important;
 }
+.navbar a{
+color: white;
+}
+.link{
+    color: blue !important;
+}    
+
 /* this is just to test applying styles to all of the pages. Color scheme will change*/

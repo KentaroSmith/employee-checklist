@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import './App.css';
 import './assets/css/style.css';
@@ -13,36 +13,14 @@ import OneDevice from "./pages/deviceID";
 import Software from "./pages/softwareAdd";
 import AllSoftware from "./pages/allSoftware";
 import OneSoftware from "./pages/softwareID";
-import { Navbar, NavItem, NavbarBrand, Nav, NavLink } from "reactstrap";
+import NavigationBar from "./components/navbar";
 class App extends Component {
   render() {
+    
     return (
       <div id="wrapper">
 {/*I removed the Container element, made everything too claustrophobic*/}
-        <Navbar /* color="dark" */ dark expand="md">
-          <NavbarBrand href="/">Home</NavbarBrand>
-          <Nav>
-            <NavItem>
-              <NavLink href="/employee">Add New Employee</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="/allEmployees">View all Employees</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="/device">Add New Device</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="/allDevices">View all Devices</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="/software">Add Software</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="/allSoftware">View All Software</NavLink>
-            </NavItem>
-          </Nav>
-        </Navbar>
-
+<NavigationBar/>
       <Router>
           <div>
             <Route exact path="/" component={Homepage} />
