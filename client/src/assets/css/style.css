@@ -29,6 +29,9 @@ body{
 #start{
     float: right;
 }
+.data{
+    float: right;
+}
 .navbar{
     background-color: navy !important;
 }

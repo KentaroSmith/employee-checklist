@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import ViewOne from "../components/viewOne";
 import api from "../utils/api";
 import {
-    Jumbotron
+    Jumbotron,
+    Button
 } from "reactstrap"
 
 class EmployeeByID extends Component{
@@ -51,7 +52,7 @@ render(){
                     requestedSoftware={this.state.employee.requestedSoftware}
                     _id={this.state.employee._id}
                     />
-
+                <Button>Edit Information</Button>
            
         </Jumbotron>
     </div>

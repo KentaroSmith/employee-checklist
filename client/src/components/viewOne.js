@@ -1,5 +1,5 @@
 import React from "react";
-import {Col, Row, CardBody,Card,CardHeader, Button} from "reactstrap";
+import {Col, Row, CardBody,Card,CardHeader, Button, Input} from "reactstrap";
 import Moment from "react-moment";
 import api from "../utils/api"
 
@@ -71,7 +71,12 @@ const ViewOne = ({
                             <Card inverse style={{ backgroundColor: '#333', borderColor: '#333' }}>
                             <CardHeader><h1>{name} <div id="start">Start Date: <Moment format="MM/DD/YYYY" >{startDate}</Moment></div></h1></CardHeader>
                             <CardBody>
-                    <h3>Employee ID# {id} </h3>
+                    <h3 className="col-md-6">Employee ID#  </h3><Input 
+                    type="text"
+                    name="id"
+                    value={id}
+                    className="col-md-2 data"
+                    ></Input>
                     <h3>Position Title: {position} </h3>
                     <h3>Account Line: {accountLine}</h3>
                     <h5>Position was posted: <Moment format="MM/DD/YYYY">{positionPosted}</Moment></h5>
