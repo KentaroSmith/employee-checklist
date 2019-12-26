@@ -24,6 +24,7 @@ findone = () => {
             theone=(Response.data);
             this.setState({software:theone})
         });
+        console.log(this.state.software)
 }
 render(){
     return(

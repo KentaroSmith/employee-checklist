@@ -64,7 +64,7 @@ const NavigationBar = (props) => {
             </UncontrolledDropdown>
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
-                Device Pages
+                Software Pages
               </DropdownToggle>
               <DropdownMenu right>
                 <DropdownItem>
