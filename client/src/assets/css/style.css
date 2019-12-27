@@ -29,9 +29,13 @@ body{
 #start{
     float: right;
 }
-.data{
-    float: right;
+/* .label{
+    position: relative;
 }
+.data{
+    position: absolute;
+    right: 0;
+} */
 .navbar{
     background-color: navy !important;
 }

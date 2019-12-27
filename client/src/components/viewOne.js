@@ -1,5 +1,5 @@
 import React from "react";
-import {Col, Row, CardBody,Card,CardHeader, Button, Input} from "reactstrap";
+import {Col, Row, CardBody,Card,CardHeader, Button, Input, Label} from "reactstrap";
 import Moment from "react-moment";
 import api from "../utils/api"
 
@@ -70,16 +70,36 @@ const ViewOne = ({
                             <Col>
                             <Card inverse style={{ backgroundColor: '#333', borderColor: '#333' }}>
                             <CardHeader><h1>{name} <div id="start">Start Date: <Moment format="MM/DD/YYYY" >{startDate}</Moment></div></h1></CardHeader>
-                            <CardBody>
-                    <h3 className="col-md-6">Employee ID#  </h3><Input 
+                            <CardBody className="form-horizonal">
+                    <Label for="id" className="label"><h3>Employee ID#  </h3></Label><Input 
                     type="text"
                     name="id"
+                    id="id"
                     value={id}
                     className="col-md-2 data"
                     ></Input>
-                    <h3>Position Title: {position} </h3>
-                    <h3>Account Line: {accountLine}</h3>
-                    <h5>Position was posted: <Moment format="MM/DD/YYYY">{positionPosted}</Moment></h5>
+                    <Label for="position" className="label"><h3>Position Title:  </h3></Label><Input
+                    type="text"
+                    name="id"
+                    id="position"
+                    value={position}
+                    className="col-md-4 data"
+                    ></Input>
+                    <Label for="accountLine"><h3>Account Line: </h3></Label><Input
+                    type="text"
+                    name="accountLine"
+                    id="accountLine"
+                    value={accountLine}
+                    className="col-md-4 data"
+                    ></Input>
+                    <Label><h5>Position was posted: <Moment format="MM/DD/YYYY">{positionPosted}</Moment></h5></Label><Input
+                    type="date"
+                    name="positionPosted"
+                    id="positionPosted"
+                    value={positionPosted}
+                    className="col-md-4 data"
+                    ></Input>
+                    
                     <h5>Direct Supervisor: {supervisorName} </h5>
                     <h5>Hiring Manager: {hiringManager} </h5>
                     <h3>City Email: <a href={"mailto:"+email}> {email} </a></h3>
