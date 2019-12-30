@@ -58,7 +58,15 @@ const ViewOne = ({
             console.log(data)
             )
     }
-    
+    const checkboxesStyle = {
+        display: 'inline',
+        position: 'relative',
+        float:"left",
+        height: '25px',
+        width: '25px',
+        backgroundColor: '#eee',
+        marginLeft:"0rem"
+    }
     return (
 
             <div>
@@ -100,16 +108,82 @@ const ViewOne = ({
                     className="col-md-4 data"
                     ></Input>
                     
-                    <h5>Direct Supervisor: {supervisorName} </h5>
-                    <h5>Hiring Manager: {hiringManager} </h5>
-                    <h3>City Email: <a href={"mailto:"+email}> {email} </a></h3>
-                    <h3>WorkGroup: {workgroup} </h3>
-                    <h3>Primary Work Location: {location} </h3>
-                    <h3>Assigned Devices: {devices} </h3>
-                    <h5>Are they Exempt? {itemBoolean(exempt)}</h5>
-                    <h5>Are they a supervisor? {itemBoolean(supervisorStatus)}</h5>
-                    <h5>Do they have a Visa? {itemBoolean(visaCard)}</h5>
-                    <h5>Do they have a Parking Pass? {itemBoolean(cityHallParkingPass)}</h5>
+                    <Label><h5>Direct Supervisor: </h5></Label><Input
+                    type="text"
+                    name="supervisorName"
+                    id="supervisorName"
+                    value={supervisorName}
+                    className="col-md-4 data"
+                    ></Input>
+                    <Label><h5>Hiring Manager: </h5></Label><Input
+                    type="text"
+                    name="hiringManager"
+                    id="hiringManager"
+                    value={hiringManager}
+                    className="col-md-4 data"
+                    ></Input>
+                    <Label><h3>City Email: <a href={"mailto:"+email}>{email}</a></h3></Label><Input
+                    type="email"
+                    name="email"
+                    id="email"
+                    value={email}
+                    className="col-md-4 data"
+                    ></Input>
+                    <Label><h3>WorkGroup: </h3></Label><Input
+                    type="text"
+                    name="workgroup"
+                    id="workgroup"
+                    value={workgroup}
+                    className="col-md-4 data"
+                    ></Input>
+                    <Label><h3>Primary Work Location: {location} </h3></Label><Input
+                    type="text"
+                    name="location"
+                    id="location"
+                    value={location}
+                    className="col-md-4 data"
+                    ></Input>
+                    <Label><h3>Assigned Devices: {devices} </h3></Label><Input
+                    type="textarea"
+                    name="devices"
+                    id="devices"
+                    value={devices}
+                    className="col-md-4 data"
+                    ></Input>
+                    <Label for="exempt"><h5>Are they Exempt? {itemBoolean(exempt)}</h5></Label><Input
+                    type="checkbox"
+                    name="exempt"
+                    id="exempt"
+                    value={itemBoolean(exempt)}
+                    className="checkbox"
+                    style={checkboxesStyle}
+                    >{' '}</Input>
+                    <Label for="supervisorStatus"><h5>Are they a supervisor? {itemBoolean(supervisorStatus)}</h5></Label><Input
+                    type="checkbox"
+                    name="supervisorStatus"
+                    id="supervisorStatus"
+                    value={itemBoolean(supervisorStatus)}
+                    className="checkbox"
+                    style={checkboxesStyle}
+                    >{' '}</Input>
+                    <Label for="visaCard"><h5>Do they have a Visa? {itemBoolean(visaCard)}</h5></Label><Input
+                    type="checkbox"
+                    name="visaCard"
+                    id="visaCard"
+                    value={itemBoolean(visaCard)}
+                    className="checkbox"
+                    style={checkboxesStyle}
+                    >{' '}</Input>
+                    <Label for="cityHallParkingPass"><h5>Do they have a Parking Pass? {itemBoolean(cityHallParkingPass)}</h5></Label><Input
+                    type="checkbox"
+                    name="cityHallParkingPass"
+                    id="cityHallParkingPass"
+                    value={itemBoolean(cityHallParkingPass)}
+                    className="checkbox"
+                    style={checkboxesStyle}
+                    >{' '}</Input>
+                    
+                    
                         </CardBody>
                         </Card>
                         </Col>
