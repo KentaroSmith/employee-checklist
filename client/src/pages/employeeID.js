@@ -52,7 +52,6 @@ render(){
                     requestedSoftware={this.state.employee.requestedSoftware}
                     _id={this.state.employee._id}
                     />
-                <Button>Edit Information</Button>
            
         </Jumbotron>
     </div>
